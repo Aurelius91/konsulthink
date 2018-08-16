@@ -45,7 +45,6 @@ class Section extends CI_Controller
 		$arr_data['acl'] = $acl;
 		$arr_data['type'] = 'section';
 		$arr_data['csrf'] = $this->cms_function->generate_csrf();
-		$arr_data['arr_category'] = $this->_get_category();
 
 		$this->load->view('html', $arr_data);
 		$this->load->view('section_add', $arr_data);
@@ -82,7 +81,6 @@ class Section extends CI_Controller
 		$arr_data['type'] = 'section';
 		$arr_data['section'] = $section;
 		$arr_data['csrf'] = $this->cms_function->generate_csrf();
-		$arr_data['arr_category'] = $this->_get_category();
 
 		$this->load->view('html', $arr_data);
 		$this->load->view('section_edit', $arr_data);
