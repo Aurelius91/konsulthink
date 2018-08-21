@@ -25,7 +25,7 @@
 									<? endif; ?>
 								</div>
 
-								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft" style="padding: 0;">
+								<div id="approach-about-us" class="col-md-12 animate-box" data-animate-effect="fadeInLeft" style="padding: 0;">
 									<? if ($lang == $setting->setting__system_language || $arr_section[0]->description_lang == ''): ?>
 										<?= $arr_section[0]->description; ?>
 									<? else: ?>

@@ -1508,3 +1508,7 @@ body.offcanvas {
   top: 90% !important;
   left: -2% !important;
 }
+
+#approach-about-us > h3 {
+  padding: 0 15%;
+}

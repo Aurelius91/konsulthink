@@ -215,11 +215,6 @@ class User extends CI_Controller
 				}
 			}
 
-			if ($user_record['location_id'] > 0)
-			{
-				$user_record = $this->cms_function->populate_foreign_field($user_record['location_id'], $user_record, 'location');
-			}
-
 			$this->_validate_add($user_record);
 
 			$user_id = $this->core_model->insert('user', $user_record);
@@ -426,19 +421,6 @@ class User extends CI_Controller
 				{
 					$user_record[$k] = ($k == 'date') ? strtotime($v) : $v;
 				}
-			}
-
-			if ($user_record['location_id'] > 0)
-			{
-				$user_record = $this->cms_function->populate_foreign_field($user_record['location_id'], $user_record, 'location');
-			}
-			else
-			{
-				$user_record['location_type'] = '';
-				$user_record['location_number'] = '';
-				$user_record['location_name'] = '';
-				$user_record['location_date'] = 0;
-				$user_record['location_status'] = '';
 			}
 
 			$this->_validate_edit($user_id, $user_record);

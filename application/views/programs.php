@@ -61,32 +61,6 @@
 									<?= $arr_section[1]->description_lang; ?>
 								<? endif; ?>
 							</div>
-							<div class="row padding" style="padding-left: 15px;">
-								<div class="col-md-3 no-gutters animate-box" data-animate-effect="fadeInLeft">
-									<a href="#" class="steps">
-										<p class="icon"><span><i class="icon-check"></i></span></p>
-										<h3>Interactive<br>Discussion</h3>
-									</a>
-								</div>
-								<div class="col-md-3 no-gutters animate-box" data-animate-effect="fadeInLeft">
-									<a href="#" class="steps">
-										<p class="icon"><span><i class="icon-check"></i></span></p>
-										<h3>Case<br>Study</h3>
-									</a>
-								</div>
-								<div class="col-md-3 no-gutters animate-box" data-animate-effect="fadeInLeft">
-									<a href="#" class="steps">
-										<p class="icon"><span><i class="icon-check"></i></span></p>
-										<h3>Seminar</h3>
-									</a>
-								</div>
-								<div class="col-md-3 no-gutters animate-box" data-animate-effect="fadeInLeft">
-									<a href="#" class="steps">
-										<p class="icon"><span><i class="icon-check"></i></span></p>
-										<h3>​Group<br>Coaching</h3>
-									</a>
-								</div>
-							</div>
 						</div>
 					</div>
 
