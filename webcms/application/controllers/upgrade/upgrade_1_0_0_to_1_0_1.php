@@ -165,32 +165,15 @@ class Upgrade_1_0_0_to_1_0_1 extends CI_Controller
 
 	private function _upgrade()
 	{
-		// get analytics
-		$this->db->simple_query("CREATE TABLE `analytics` (
-		  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-		  `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-		  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-		  `deletable` tinyint(1) unsigned NOT NULL DEFAULT '1',
-		  `editable` tinyint(1) unsigned NOT NULL DEFAULT '1',
-		  `author_id` int(10) unsigned NOT NULL DEFAULT '0',
-		  `type` varchar(128) NOT NULL DEFAULT '',
-		  `number` varchar(128) NOT NULL DEFAULT '',
-		  `name` varchar(255) NOT NULL DEFAULT '',
-		  `date` int(10) unsigned NOT NULL DEFAULT '0',
-		  `status` varchar(128) NOT NULL DEFAULT '',
-		  `website_url` varchar(255) NOT NULL DEFAULT '',
-		  `browser` varchar(255) NOT NULL DEFAULT '',
-		  `version` varchar(255) NOT NULL DEFAULT '',
-		  `mobile` varchar(255) NOT NULL DEFAULT '',
-		  `platform` varchar(255) NOT NULL DEFAULT '',
-		  `referrer` varchar(255) NOT NULL DEFAULT '',
-		  `agent_string` text NOT NULL,
-		  `ip_address` varchar(32) NOT NULL DEFAULT '',
-		  `location` varchar(255) NOT NULL DEFAULT '',
-		  `author_name` varchar(255) NOT NULL DEFAULT '',
-		  PRIMARY KEY (`id`),
-		  KEY `author_id` (`author_id`),
-		  KEY `date` (`date`)
-		) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8");
+		$this->db->simple_query("INSERT INTO `header` (`id`, `created`, `updated`, `deletable`, `author_id`, `type`, `name`, `link`, `sort`, `author_name`) VALUES ('6', '2000-01-01 00:00:00', '2000-01-01 00:00:00', '0', '1', 'Navbar', 'GALLERY', 'gallery', '5', 'Super Admin');");
+		$this->db->simple_query("UPDATE `header` SET `sort` = '6' WHERE `id` = '5';");
+		$this->db->simple_query("UPDATE `header` SET `sort` = '1' WHERE `id` = '1';");
+		$this->db->simple_query("UPDATE `header` SET `sort` = '2' WHERE `id` = '2';");
+		$this->db->simple_query("UPDATE `header` SET `sort` = '3' WHERE `id` = '3';");
+		$this->db->simple_query("UPDATE `header` SET `sort` = '4' WHERE `id` = '4';");
+
+		$this->db->simple_query("INSERT INTO `metatag` (`created`, `updated`, `deletable`, `author_id`, `header_id`, `name`, `keywords`, `author`, `description`, `author_name`, `header_type`, `header_name`) VALUES ('2000-01-01 00:00:00', '2000-01-01 00:00:00', '0', '1', '6', 'KonsulTHINK | Gallery', 'konsulthink gallery page', 'Aries Creation', 'KonsulTHINK Website Gallery Page', 'Super Admin', 'Navbar', 'GALLERY');");
+
+		$this->db->simple_query("INSERT INTO `section` (`created`, `updated`, `deletable`, `author_id`, `header_id`, `name`, `title`, `subtitle`, `no_name`, `no_description`, `no_link`, `no_custom_text_1`, `no_custom_text_2`, `image_size`, `author_name`, `header_type`, `header_name`) VALUES ('2000-01-01 00:00:00', '2000-01-01 00:00:00', '0', '1', '6', 'Gallery', 'Our Gallery', '', '1', '1', '1', '1', '1', '1920px x 1080px', 'Super Admin', 'Navbar', 'GALLERY');");
 	}
 }

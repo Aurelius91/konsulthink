@@ -216,6 +216,8 @@
 
 					<a href="<?= base_url(); ?>section/view/4/1/" class="<? if ($type == 'Section-4'): ?>active<? endif; ?> item"><i class="clone icon"></i> Events Page</a>
 
+					<a href="<?= base_url(); ?>section/view/6/1/" class="<? if ($type == 'Section-6'): ?>active<? endif; ?> item"><i class="clone icon"></i> Gallery Page</a>
+
 					<a href="<?= base_url(); ?>section/view/5/1/" class="<? if ($type == 'Section-5'): ?>active<? endif; ?> item"><i class="clone icon"></i> Contact Us Page</a>
 
 					<a href="<?= base_url(); ?>slideshow/view/1/" class="<? if ($type == 'Slideshow'): ?>active<? endif; ?> item"><i class="image icon"></i> Slideshow Home Page Banner</a>
